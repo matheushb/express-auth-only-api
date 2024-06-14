@@ -15,6 +15,7 @@ export class App {
 
   constructor() {
     this.app = express();
+    this.cors();
     this.database();
     this.middlewares();
     this.routes();
@@ -24,6 +25,18 @@ export class App {
   private middlewares() {
     this.app.use(express.json());
     this.app.use(jwtValidator(["/signup", "/signin"]));
+  }
+
+  private cors() {
+    this.app.use((req, res, next) => {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader(
+        "Access-Control-Allow-Methods",
+        "POST, GET, PUT, DELETE, PATCH",
+      );
+      res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+      next();
+    });
   }
 
   private routes() {

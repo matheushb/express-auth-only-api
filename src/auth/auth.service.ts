@@ -11,9 +11,9 @@ export class AuthService {
   constructor(private readonly userService: UserService) {}
 
   async signin(loginDto: LoginDto) {
-    const { email, password } = loginDto;
+    const { name, password } = loginDto;
 
-    const user = await this.userService.findByEmail(email);
+    const user = await this.userService.findByName(name);
 
     if (!user) throw new UnauthorizedException("Usuário ou senha inválidos");
 
@@ -36,7 +36,7 @@ export class AuthService {
   }
 
   private signToken(user: Partial<UserEntity>) {
-    return jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, {
+    return jwt.sign({ id: user.id, email: user.name }, JWT_SECRET, {
       expiresIn: "7d",
     });
   }

@@ -8,18 +8,10 @@
  *         name:
  *           type: string
  *           description: Nome do usuário
- *           example: Matheus Baraldi
- *         email:
- *           type: string
- *           description: Email do usuário
- *           example: matheusbaraldi@mail.com
+ *           example: 0212
  *         password:
  *           type: string
- *           description: Senha do usuário
- *         weight:
- *           type: integer
- *           description: Peso do usuário
- *           example: 80
+ *           description: 1234
  *     ReturnUser:
  *       type: object
  *       properties:
@@ -29,15 +21,7 @@
  *         name:
  *           type: string
  *           description: Nome do usuário
- *           example: Matheus Baraldi
- *         email:
- *           type: string
- *           description: Email do usuário
- *           example: matheusbaraldi@mail.com
- *         weight:
- *           type: integer
- *           description: Peso do usuário
- *           example: 80
+ *           example: 0212
  *         createdAt:
  *           type: string
  *           description: Data de criação do livro
@@ -56,14 +40,6 @@
  *           type: string
  *           description: Nome do usuário
  *           example: Matheus Baraldi
- *         email:
- *           type: string
- *           description: Email do usuário
- *           example: matheusbaraldi@mail.com
- *         weight:
- *           type: integer
- *           description: Peso do usuário
- *           example: 80
  *         access_token:
  *           type: string
  *           description: JWT Token

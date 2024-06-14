@@ -56,13 +56,6 @@ userRoutes.get(
  *         description: ID do usuário a ser retornado
  *         schema:
  *           type: string
- *       - in: query
- *         name: userIdFilterType
- *         required: false
- *         description: Tipo de filtro por user_id
- *         schema:
- *           type: string
- *           enum: [TASK_QUANTITY, OLDEST_TASK, MOST_RECENT_TASK]
  *     responses:
  *       200:
  *         description: usuário retornado com sucesso

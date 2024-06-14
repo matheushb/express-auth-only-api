@@ -5,14 +5,14 @@
  *      Login:
  *       type: object
  *       properties:
- *         email:
+ *         name:
  *           type: string
- *           description: Email do usuário
- *           example: matheusbaraldi@mail.com
+ *           description: Usuário
+ *           example: 0202
  *         password:
  *           type: string
  *           description: Senha do usuário
- *           example: string
+ *           example: 1234
  *      ReturnLogin:
  *       type: object
  *       properties:
@@ -23,10 +23,10 @@
  */
 
 export const loginDto = {
-  user: {
+  name: {
     minLength: 1,
     maxLength: 4,
-    required: "User is required",
+    required: "Name is required",
   },
   password: {
     minLength: 1,
@@ -36,6 +36,6 @@ export const loginDto = {
 };
 
 export interface LoginDto {
-  email: string;
+  name: string;
   password: string;
 }
